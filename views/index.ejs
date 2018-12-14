@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="author" content="Steve Labus">
+  <meta name="description" content="Wild Circus is the best circus you'll ever see, with incredible performances and competitive prices!">
+  <meta name="keywords" content="wild circus, circus, clown, fun">
+  <title>Wild Circus</title>
+
+  <link rel="stylesheet" href="stylesheets/font-awesome/all.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/animate.css">
+
+  <link rel="stylesheet" href="stylesheets/header-animation.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.svg" alt="Logo" class="wow bounceInDown">
+  <h1 id="title" class="wow bounceIn">Wild Circus</h1>
+  <hr>
+  <nav>
+    <ul id="header-nav" class="row">
+      <li class="col-md-3"><a href="#performances">Performances</a></li>
+      <li class="col-md-3"><a href="#about-us">About Us</a></li>
+      <li class="col-md-3"><a href="#prices">Prices</a></li>
+      <li class="col-md-3"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="performances">
+  <h2 class="title">Performances</h2>
+  <hr>
+  <ul class="row wow slideInLeft" id="performances-row">
+    <!-- performance 1 -->
+    <li class="performance col-md-4">
+      <i class="far fa-grin-squint-tears"></i>
+      <h3>Laugh</h3>
+      <p>As an adult, come and discover our irresistible clowns, between practical jokes and pranks let yourself be carried away by their joy and fall back into childhood.</p>
+    </li>
+    <!-- performance 2 -->
+    <li class="performance col-md-4">
+      <i class="fas fa-cloud"></i>
+      <h3>Dream</h3>
+      <p>Let yourself be carried away in a world where the real and the imaginary are one, in the company of our talented magicians, discover a wonderful world limited only by your imagination.</p>
+    </li>
+    <!-- performance 3 -->
+    <li class="performance col-md-4">
+      <i class="far fa-surprise"></i>
+      <h3>Marvel at</h3>
+      <p>Tame the untameable in the company of our tamers, between roar and razor-sharp claws, watch these fierce felines turn into sweet kittens.</p>
+    </li>
+  </ul>
+</section>
+<section id="about-us">
+  <h2 class="title">About Us</h2>
+  <hr>
+  <ul class="row wow slideInRight">
+    <li class="col-md-4 mt-1">
+      <div class="card">
+        <img class="card-img-top about-us-img" src="images/about-us-1.png" alt="Card image cap">
+        <div class="card-body">
+          <h3>SuperClown</h3>
+          <p class="card-text">SuperClown is the funniest clown you'll ever see!</p>
+        </div>
+      </div>
+    </li>
+    <li class="col-md-4 mt-1">
+      <div class="card">
+        <img class="card-img-top about-us-img" src="images/about-us-2.png" alt="Card image cap">
+        <div class="card-body">
+          <h3>CrazyClown</h3>
+          <p class="card-text">CrazyClown is really crazy, and that's what makes him funny</p>
+        </div>
+      </div>
+    </li>
+    <li class="col-md-4 mt-1">
+      <div class="card">
+        <img class="card-img-top about-us-img" src="images/about-us-3.png" alt="Card image cap">
+        <div class="card-body">
+          <h3>AngryClown</h3>
+          <p class="card-text">AngryClown is always angry, and that's really funny!</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section id="prices">
+  <h2 class="title">Prices</h2>
+  <hr>
+  <table class="table table-borderless table-dark table-hover wow bounceInLeft">
+    <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Adultes</th>
+      <th scope="col">Enfants de - de 12 ans</th>
+      <th scope="col">Groupes (+ de 10 personnes)</th>
+      <th scope="col">Écoles</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>Semaines hors mercredi</th>
+      <td>12€</td>
+      <td>6€</td>
+      <td>60€</td>
+      <td>50€</td>
+    </tr>
+    <tr>
+      <th>Week-end et mercredi</th>
+      <td>10€</td>
+      <td>5€</td>
+      <td>50€</td>
+      <td>40€</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact Us</h2>
+  <hr>
+  <div class="container wow slideInUp">
+    <form action="/" method="post">
+      <div class="row">
+        <div class="col-md-12">
+          <% if (typeof flash !== 'undefined' && flash.length > 0) {
+                  while (message = flash.shift()){%>
+            <div class="alert alert-<%= message.type %>" role="alert">
+              <%= message.message %>
+            </div>
+          <% }} %>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nameInput">Nom et prénom</label>
+            <input type="text" class="form-control" id="nameInput" name="identity" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="mailInput">Adresse mail</label>
+            <input type="email" class="form-control" id="mailInput" placeholder="Exemple: blabla@icloud.com" name="email" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="messageInput">Votre message</label>
+        <textarea class="form-control" id="messageInput" rows="3" cols="3" name="content"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Envoyer</button>
+      </div>
+    </form>
+  </div>
+  <hr>
+</section>
+
+<footer>
+  <p>Wild Circus by <a href="https://github.com/AngryKiller">Steve Labus</a> - France-IOI: <a href="http://www.france-ioi.org/user/perso.php?sLogin=angrykiller">Profil</a> -
+    <a href="https://wildcodeschool.fr">Wild Code School</a> - 10/12/2018</p>
+</footer>
+<script src="javascripts/jquery-3.3.1.min.js"></script>
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+<script src="javascripts/app.js"></script>
+</body>
+</html>
